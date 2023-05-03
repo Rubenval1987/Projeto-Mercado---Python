@@ -37,11 +37,11 @@ def menu() -> None:
     elif opcao == 5:
         fechar_pedido()
     elif opcao == 6:
-        print('Volte sempre!')
+        print('Volte sempre!!')
         sleep(2)
         exit(0)
     else:
-        print('Opção inválida!')
+        print('Opção inválida!!')
         sleep(1)
         menu()
 
@@ -63,10 +63,10 @@ def cadastrar_produto() -> None:
 def listar_produtos() -> None:
     if len(produtos) > 0:
         print('Listagem de produtos')
-        print('--------------------')
+        print('-----------------------')
         for produto in produtos:
             print(produto)
-            print('----------------')
+            print('---------------------')
             sleep(1)
     else:
         print('Ainda não existem produtos cadastrados.')
@@ -80,7 +80,7 @@ def comprar_produto() -> None:
         print('================== Produtos Disponíveis ======================')
         for produto in produtos:
             print(produto)
-            print('---------------------------------------------------------')
+            print('----------------------------------------------------------')
             sleep(1)
         codigo: int = int(input())
 
@@ -126,7 +126,7 @@ def visualizar_carrinho() -> None:
             for dados in item.items():
                 print(dados[0])
                 print(f'Quantidade: {dados[1]}')
-                print('-----------------------')
+                print('----------------------------')
                 sleep(1)
     else:
         print('Ainda não existem produtos no carrinho.')
@@ -143,7 +143,7 @@ def fechar_pedido() -> None:
                 print(dados[0])
                 print(f'Quantidade: {dados[1]}')
                 valor_total += dados[0].preco * dados[1]
-                print('------------------------')
+                print('-------------------------------')
                 sleep(1)
         print(f'Sua fatura é {formata_float_str_moeda(valor_total)}')
         print('Volte sempre!')
